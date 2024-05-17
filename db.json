@@ -1,22 +1,28 @@
 {
-    "memes": [
-        {
-            "id": 1,
-            "img_url": "https://i.imgflip.com/7dh3x9.jpg",
-            "likes": 1,
-            "caption": "Woosh"
-        },
-        {
-            "id": 2,
-            "img_url": "https://www.cnet.com/a/img/resize/b91f76de73cb2fc61e3dd7112e4a3e768cac4fbd/hub/2012/12/17/b8f59d5e-fdb4-11e2-8c7c-d4ae52e62bcc/3s8ipj.jpg?auto=webp&fit=crop&height=675&width=1200",
-            "likes": 2,
-            "caption": "Grumpy cat"
-        },
-        {
-            "id": 3,
-            "img_url": "https://static01.nyt.com/images/2010/06/14/business/sub-jp-burger-2/sub-jp-burger-2-popup.jpg?quality=75&auto=webp&disable=upscale",
-            "likes": 3,
-            "caption": "But seriously where is my cheezburger"
-        }
-    ]
+  "memes": [
+    {
+      "id": "1",
+      "img_url": "https://i.imgflip.com/7dh3x9.jpg",
+      "likes": 6,
+      "caption": "Woosh"
+    },
+    {
+      "id": "2",
+      "img_url": "https://www.cnet.com/a/img/resize/b91f76de73cb2fc61e3dd7112e4a3e768cac4fbd/hub/2012/12/17/b8f59d5e-fdb4-11e2-8c7c-d4ae52e62bcc/3s8ipj.jpg?auto=webp&fit=crop&height=675&width=1200",
+      "likes": 3,
+      "caption": "Grumpy cat"
+    },
+    {
+      "id": "3",
+      "img_url": "https://static01.nyt.com/images/2010/06/14/business/sub-jp-burger-2/sub-jp-burger-2-popup.jpg?quality=75&auto=webp&disable=upscale",
+      "likes": 4,
+      "caption": "But seriously where is my cheezburger"
+    },
+    {
+      "id": "be2b",
+      "img_url": "https://media.istockphoto.com/id/1434414228/photo/stern-sad-cat-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=wis7NGP0_4_Vwti3xioilh3NfYrwHO-JoRMvFVzr6Ck=",
+      "caption": "angry",
+      "likes": 1
+    }
+  ]
 }

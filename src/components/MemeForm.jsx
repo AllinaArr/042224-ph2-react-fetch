@@ -1,29 +1,60 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-function MemeForm() {
+function MemeForm({ memes, setMemes }) {
+  const URL = "http://localhost:3000/memes";
 
-    const URL = 'http://localhost:3000/memes'
+  const [img_url, setImgURL] = useState("");
+  const [caption, setCaption] = useState("");
 
-    function handleSubmit(e) {
-        e.preventDefault()
-    }
+  function handleSubmit(e) {
+    e.preventDefault();
 
-    return (
-        <form onSubmit={handleSubmit}>
+    fetch(URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      //  second version:  body: JSON.stringify({ img_url: img_url, caption: caption, likes: 0 }),
+      body: JSON.stringify({ img_url, caption, likes: 0 }),
+    })
+      .then((response) => response.json())
+      .then((newMeme) => {
+        setMemes([newMeme, ...memes]);
+      });
 
-            <label htmlFor="img_url">Image URL:</label>
+    setImgURL("");
+    setCaption("");
+  }
 
-            <input name="img_url" type="text" />
+  // onChange PUT IT SOMEWHERE
+  //value PUT IT SOMEWHERE
+  return (
+    <form onSubmit={handleSubmit}>
+      <label htmlFor='img_url'>Image URL:</label>
 
-            <label htmlFor="caption">Caption:</label>
+      <input
+        name='img_url'
+        type='text'
+        value={img_url}
+        onChange={(event) => {
+          setImgURL(event.target.value);
+        }}
+      />
 
-            <input name="caption" type="text" />
+      <label htmlFor='caption'>Caption:</label>
 
-            <input type="submit" value="Add Meme" />
+      <input
+        name='caption'
+        type='text'
+        value={caption}
+        onChange={(event) => {
+          setCaption(event.target.value);
+        }}
+      />
 
-        </form>
-    )
-
+      <input type='submit' value='Add Meme' />
+    </form>
+  );
 }
 
-export default MemeForm
+export default MemeForm;
